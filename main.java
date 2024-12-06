@@ -6,6 +6,17 @@ abstract class Employee{
         this.name = name;
         this.id = id;
     }
+    // getter and setter method
+
+    public String getName(){
+        return name;
+    }
+
+    public int getId(){
+        return id;
+    }
+
+    
 
 }
 public class main {
