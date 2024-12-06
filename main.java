@@ -25,7 +25,7 @@ abstract class Employee{
     }
 }
 
-class FullTimeEmployee extends Employee{
+class FullTimeEmployee extends Employee{// as we are extinding an abstract class we were getting this error bcoz no body was provided for that abstract class
     private double monthlySalary;
 
     public FullTimeEmployee(String name, int id, double monthlySalary){
@@ -33,7 +33,10 @@ class FullTimeEmployee extends Employee{
         this.monthlySalary = monthlySalary;
     }
 
-    @
+    @Override
+    public double calculateSalary(){
+
+    }
 }
 public class main {
     public static void main(String[] args) {
