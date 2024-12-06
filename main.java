@@ -29,8 +29,11 @@ class FullTimeEmployee extends Employee{
     private double monthlySalary;
 
     public FullTimeEmployee(String name, int id, double monthlySalary){
-        
+        super(name, id); // taken from the parent class
+        this.monthlySalary = monthlySalary;
     }
+
+    @
 }
 public class main {
     public static void main(String[] args) {
