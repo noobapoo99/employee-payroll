@@ -23,9 +23,14 @@ abstract class Employee{
     public String toString(){
         return "Employee [name="+name+" , id = "+id+" , salary = "+calculateSalary()+" ]";
     }
+}
 
-    
+class FullTimeEmployee extends Employee{
+    private double monthlySalary;
 
+    public FullTimeEmployee(String name, int id, double monthlySalary){
+        
+    }
 }
 public class main {
     public static void main(String[] args) {
