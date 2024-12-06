@@ -47,7 +47,7 @@ class PartTimeEmployee extends Employee{
 
     private double hourlyRate;
 
-    public PartTimeEmployee(string name,int id, int hoursWorked, double hourlyRate){
+    public PartTimeEmployee(String name,int id, int hoursWorked, double hourlyRate){
         super(name,id);
         this.hoursWorked = hoursWorked;
         this.hourlyRate = hourlyRate;
@@ -59,7 +59,7 @@ class PartTimeEmployee extends Employee{
     }
 }
 
-class PayrollSystem(){
+class PayrollSystem{
     private ArrayList<Employee>employeeList;
 
     public PayrollSystem(){
@@ -80,10 +80,29 @@ class PayrollSystem(){
             employeeList.remove(employeeToRemove);
         }
     }
+    public void displayEmployees(){
+        for(Employee employee: employeeList){
+            System.out.println(employee);
+        }
+    }
 }
 public class main {
     public static void main(String[] args) {
-        System.out.println("Hello World");
+       PayrollSystem payrollSystem = new PayrollSystem();
+       FullTimeEmployee emp1 = new FullTimeEmployee("John Doe", 101, 5000.0);
+        PartTimeEmployee emp2 = new PartTimeEmployee("Jane Smith", 102, 30, 15.0);
+
+        payrollSystem.addEmployee(emp1);
+        payrollSystem.addEmployee(emp2);
+
+        System.out.println("Initial Employee Details:");
+        payrollSystem.displayEmployees();
+
+        System.out.println("\nRemoving Employee...");
+        payrollSystem.removeEmployee(101);
+
+        System.out.println("\nRemaining Employee Details:");
+        payrollSystem.displayEmployees();
     }
     
 }
