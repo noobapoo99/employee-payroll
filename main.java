@@ -9,7 +9,7 @@ abstract class Employee{
         this.id = id;
     }
     // getter and setter method
-
+    // this shows encasuplation bcoz we are securing name , nobody can access name and can be accessed only using this method
     public String getName(){
         return name;
     }
@@ -18,10 +18,11 @@ abstract class Employee{
         return id;
     }
 
-    // abstract
+    // abstract function
+    // abstract has a major feature that you dont have to declare the body of the task , just declare it and leave it to be used later
     public abstract double calculateSalary();
 
-    @Override
+    @Override// we are overriding the default(built-in function) to string method
     public String toString(){
         return "Employee [name="+name+" , id = "+id+" , salary = "+calculateSalary()+" ]";
     }
