@@ -16,7 +16,12 @@ abstract class Employee{
         return id;
     }
 
+    // abstract
+    public abstract double calculateSalary();
+
+    @Override
     
+
 
 }
 public class main {
