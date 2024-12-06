@@ -35,7 +35,7 @@ class FullTimeEmployee extends Employee{// as we are extinding an abstract class
 
     @Override
     public double calculateSalary(){
-
+        return monthlySalary;
     }
 }
 public class main {
