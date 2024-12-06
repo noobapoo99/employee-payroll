@@ -38,6 +38,24 @@ class FullTimeEmployee extends Employee{// as we are extinding an abstract class
         return monthlySalary;
     }
 }
+
+class PartTimeEmployee extends Employee{
+    
+    private int hoursWorked;
+
+    private double hourlyRate;
+
+    public PartTimeEmployee(string name,int id, int hoursWorked, double hourlyRate){
+        super(name,id);
+        this.hoursWorked = hoursWorked;
+        this.hourlyRate = hourlyRate;
+    }
+
+    @Override
+    public double calculateSalary(){
+        return hoursWorked * hourlyRate;
+    }
+}
 public class main {
     public static void main(String[] args) {
         System.out.println("Hello World");
